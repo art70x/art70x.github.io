@@ -197,12 +197,7 @@ main:focus {
   border-color: #202020
 }
 
-.logo-large {
-  width: min(62%, 260px);
-  position: relative;
-  z-index: 1;
-  filter: drop-shadow(0 12px 30px #000)
-}
+
 
 .art-caption {
   position: absolute;
