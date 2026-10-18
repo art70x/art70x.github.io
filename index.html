@@ -6,8 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0B0B0B">
   <meta name="description"
-    content="art70x — frontend developer, student, and builder creating clean, useful web experiences.">
-  <title>art70x — Create. Improve. Repeat.</title>
+    content="art70x is a frontend developer and student building practical web tools and interfaces with HTML, CSS, JavaScript, Vue, and TypeScript.">
+  <title>art70x | Frontend Developer &amp; Student</title>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="art70x | Frontend Developer &amp; Student">
+  <meta property="og:description" content="Practical web tools and frontend projects by art70x.">
+  <meta property="og:url" content="https://art70x.github.io/">
   <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,11 +20,13 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
+  
+  <!-- Icons -->
   <link rel="icon" href="assets/icon-light.png" type="image/png"
     media="(prefers-color-scheme: light)" />
   <link rel="icon" href="assets/icon-dark.png" type="image/png"
     media="(prefers-color-scheme: dark)" />
-    
+  
   <!-- fallback for browsers that ignore media on favicons -->
   <link rel="icon" href="assets/icon-light.png" type="image/png" />
 </head>
@@ -28,8 +34,7 @@
 <body>
   <header class="wrap topbar">
     <a class="brand" href="#home" aria-label="art70x home">
-      <img src="./assets/logo.png" class="mark" aria-hidden="true"
-        alt="Art70x Logo" />
+      <img src="./assets/logo.webp" class="mark" width="38" height="38" alt="" />
       <span>art70x</span>
     </a>
     <nav class="nav" aria-label="Main navigation">
@@ -40,15 +45,13 @@
       </a>
     </nav>
   </header>
-  <main id="home">
-    <section class="wrap hero">
+  <a class="skip-link" href="#content">Skip to content</a>
+  <main id="content" tabindex="-1">
+    <section class="wrap hero" id="home">
       <div>
         <div class="eyebrow">Frontend developer · Student · Builder</div>
         <h1>Build with <span>purpose.</span></h1>
-        <p class="lead">I’m <strong>art70x</strong> — a frontend developer who
-          enjoys turning ideas into clean, useful digital experiences. I’m
-          learning, experimenting, and building tools that make everyday work a
-          little better.</p>
+        <p class="lead">I’m <strong>art70x</strong>, a frontend developer and student. I build practical web tools, experiment with interface ideas, and learn by shipping projects.</p>
         <div class="actions">
           <a class="btn primary" href="#work">EXPLORE MY WORK
             <span>
@@ -63,8 +66,8 @@
         </div>
         <p class="small-note">CREATE / IMPROVE / REPEAT</p>
       </div>
-      <div class="hero-art" aria-label="A7 geometric brand mark">
-        <img src="./assets/logo.png" alt="A7 Logo" class="logo-large" />
+      <div class="hero-art">
+        <img src="./assets/logo.webp" alt="" class="logo-large" width="640" height="640" fetchpriority="high" decoding="async" />
         <div class="art-caption">
           <span>ART / 70X</span>
           <span>Independent by
@@ -78,11 +81,9 @@
         <div class="section-head">
           <div>
             <div class="eyebrow">Selected projects</div>
-            <h2>Small ideas. Useful outcomes.</h2>
+            <h2>Tools I’ve been building.</h2>
           </div>
-          <p class="section-intro">A few projects from my GitHub, focused on
-            practical tools, thoughtful interfaces, and developer experience.
-          </p>
+          <p class="section-intro">These projects explore math formatting, JSON editing, and frontend tooling. Each started with a specific task I wanted to make easier.</p>
         </div>
         <div class="project-grid" id="projects">
           <a class="project" href="https://github.com/art70x/Plain2TeX"
@@ -172,17 +173,13 @@
         <div class="section-head">
           <div>
             <div class="eyebrow">A little about me</div>
-            <h2>Curious by default.</h2>
+            <h2>Learning by building.</h2>
           </div>
         </div>
         <div class="about-grid">
           <div class="about-copy">
-            <p>I care about interfaces that feel <strong>clear, fast, and
-                considered</strong>. My process is simple: understand the
-              problem, build a focused solution, then keep refining it.</p>
-            <p>Right now, I’m exploring <strong>Vue, Vite, and Nuxt</strong>
-              while building practical projects and strengthening my frontend
-              foundations.</p>
+            <p>I aim to make interfaces <strong>clear and easy to use</strong>. I start by identifying the task, build the smallest useful solution, and test what needs to improve.</p>
+            <p>I’m currently working with <strong>Vue, Vite, and Nuxt</strong> while strengthening my HTML, CSS, JavaScript, and TypeScript skills through projects.</p>
             <div class="stack">
               <span class="tag">HTML & CSS</span>
               <span class="tag">JavaScript</span>
@@ -224,9 +221,8 @@
       <div class="wrap contact-panel">
         <div>
           <div class="eyebrow">Have an idea?</div>
-          <h2>Let’s make it useful.</h2>
-          <p>Open to learning, collaboration, and interesting frontend projects.
-          </p>
+          <h2>Have a project in mind?</h2>
+          <p>I’m open to collaborating, learning from other developers, and building useful frontend projects.</p>
         </div>
         <div class="actions"><a class="btn primary"
             href="https://github.com/art70x" target="_blank" rel="noreferrer">
@@ -246,8 +242,7 @@
     </section>
   </main>
   <footer class="wrap footer">
-    <span>&copy; <span id="year"></span> ART70X — CREATE /
-      IMPROVE / REPEAT</span>
+    <span>&copy; <span id="year"></span> ART70X / CREATE, IMPROVE, REPEAT</span>
     <div class="footer-links">
       <a href="https://github.com/art70x" target="_blank" rel="noreferrer">
         GITHUB <i class="ph ph-arrow-up-right" aria-hidden="true"></i>

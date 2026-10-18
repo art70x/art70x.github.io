@@ -15,6 +15,7 @@
 
 html {
   scroll-behavior: smooth
+  scroll-padding-top: 1rem
 }
 
 body {
@@ -32,8 +33,27 @@ a {
 
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid white;
+  outline: 2px solid #fff;
   outline-offset: 4px
+}
+
+.skip-link {
+  position: absolute;
+  z-index: 10;
+  inset-block-start: 8px;
+  inset-inline-start: 8px;
+  padding: 10px 14px;
+  color: #080808;
+  background: #fff;
+  transform: translateY(-150%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+main:focus {
+  outline: none;
 }
 
 .wrap {
@@ -104,7 +124,8 @@ button:focus-visible {
   line-height: .99;
   letter-spacing: -.065em;
   margin: 22px 0 24px;
-  font-weight: 700
+  font-weight: 700;
+  text-wrap: balance
 }
 
 .hero h1 span {
@@ -190,7 +211,7 @@ button:focus-visible {
   right: 24px;
   display: flex;
   justify-content: space-between;
-  color: #777;
+  color: #a0a0a0;
   font-size: 9px;
   letter-spacing: .18em;
   text-transform: uppercase
@@ -213,7 +234,8 @@ button:focus-visible {
   font-size: clamp(26px, 3vw, 38px);
   letter-spacing: -.04em;
   line-height: 1.1;
-  margin: 10px 0 0
+  margin: 10px 0 0;
+  text-wrap: balance
 }
 
 .section-intro {
@@ -373,7 +395,7 @@ button:focus-visible {
   align-items: center;
   justify-content: space-between;
   gap: 18px;
-  color: #777;
+  color: #a0a0a0;
   font-size: 10px;
   letter-spacing: .08em
 }
@@ -413,7 +435,7 @@ button:focus-visible {
 
 .small-note {
   font-size: 10px;
-  color: #666;
+  color: #a0a0a0;
   margin-top: 14px
 }
 
@@ -438,11 +460,12 @@ button:focus-visible {
 
 @media(max-width:760px) {
   .nav {
-    gap: 14px
+    gap: 12px;
+    font-size: 10px
   }
-  
-  .nav a:not(.contact) {
-    display: none
+
+  .nav .contact {
+    padding: 8px 10px
   }
   
   .hero {
@@ -488,14 +511,39 @@ button:focus-visible {
   }
 }
 
+@media(max-width:420px) {
+  .topbar {
+    min-height: 72px;
+    height: auto;
+    gap: 12px;
+    padding-block: 12px;
+    flex-wrap: wrap
+  }
+
+  .nav {
+    gap: 10px;
+    font-size: 9px
+  }
+
+  .nav .contact {
+    padding: 7px 8px
+  }
+}
+
 @media(prefers-reduced-motion:reduce) {
   html {
     scroll-behavior: auto
   }
-  
+
   *,
   *:before,
   *:after {
-    transition: none !important
+    transition: none !important;
+    animation: none !important
+  }
+
+  .btn:hover,
+  .project:hover {
+    transform: none
   }
 }
