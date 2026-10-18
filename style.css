@@ -14,7 +14,7 @@
 }
 
 html {
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
   scroll-padding-top: 1rem
 }
 
@@ -170,34 +170,50 @@ main:focus {
   transform: translateY(-2px)
 }
 
+
 .hero-art {
   position: relative;
   min-height: 360px;
   border: 1px solid #292929;
-  background: radial-gradient(ellipse at 50% 38%, #252525 0%, #111 48%, #0b0b0b 76%);
+  background: radial-gradient(ellipse at 50% 38%,
+      #252525 0%,
+      #111 48%,
+      #0b0b0b 76%);
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden
+  overflow: hidden;
 }
 
-.hero-art:before,
-.hero-art:after {
+.hero-art::before,
+.hero-art::after {
   content: "";
   position: absolute;
+  top: 50%;
+  left: 50%;
   width: 280px;
   height: 280px;
   border: 1px solid #292929;
-  transform: rotate(45deg)
+  transform: translate(-50%, -50%) rotate(45deg);
+  pointer-events: none;
 }
 
-.hero-art:after {
+.hero-art::after {
   width: 205px;
   height: 205px;
-  border-color: #202020
+  border-color: #202020;
 }
 
-
+.logo-large {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(56%, 240px);
+  height: auto;
+  z-index: 1;
+  filter: drop-shadow(0 12px 30px #000);
+}
 
 .art-caption {
   position: absolute;
@@ -458,7 +474,7 @@ main:focus {
     gap: 12px;
     font-size: 10px
   }
-
+  
   .nav .contact {
     padding: 8px 10px
   }
@@ -514,12 +530,12 @@ main:focus {
     padding-block: 12px;
     flex-wrap: wrap
   }
-
+  
   .nav {
     gap: 10px;
     font-size: 9px
   }
-
+  
   .nav .contact {
     padding: 7px 8px
   }
@@ -529,14 +545,14 @@ main:focus {
   html {
     scroll-behavior: auto
   }
-
+  
   *,
   *:before,
   *:after {
     transition: none !important;
     animation: none !important
   }
-
+  
   .btn:hover,
   .project:hover {
     transform: none
