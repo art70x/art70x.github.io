@@ -1,0 +1,29 @@
+allowBuilds:
+  esbuild: true
+  lightningcss: true
+packages:
+  - .
+permissions:
+  '@tanstack/devtools-vite':
+    skills: true
+  '@tanstack/react-router':
+    skills: [router-query, migrate-from-react-router, react-router]
+  '@tanstack/router-plugin':
+    skills: true
+  taze:
+    skills: true
+skills:
+  dirs:
+    - .claude/skills
+    - .github/skills
+catalog:
+  '@tabler/icons-react': ^3.50.0
+  vite: npm:@voidzero-dev/vite-plus-core@1.4.0
+  vite-plus: 1.4.0
+overrides:
+  vite@*: 'catalog:'
+peerDependencyRules:
+  allowAny:
+    - vite
+  allowedVersions:
+    vite: '*'
