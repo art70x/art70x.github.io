@@ -1,14 +1,33 @@
 import { createFileRoute } from '@tanstack/react-router'
 
-export const Route = createFileRoute('/')({ component: Home })
+import About from '@/components/About'
+import Contact from '@/components/Contact'
+import Footer from '@/components/Footer'
+import Header from '@/components/Header'
+import Hero from '@/components/Hero'
+import Projects from '@/components/Projects'
 
-function Home() {
+export const Route = createFileRoute('/')({
+  component: HomePage,
+})
+
+function HomePage() {
   return (
-    <div className="p-8">
-      <h1 className="text-4xl font-bold">Welcome to TanStack Start</h1>
-      <p className="mt-4 text-lg">
-        Edit <code>src/routes/index.tsx</code> to get started.
-      </p>
-    </div>
+    <>
+      <a
+        href="#content"
+        className="absolute inset-s-2 top-2 z-10 translate-y-[-150%] bg-white px-3.5 py-2.5 text-[#080808] focus:translate-y-0"
+      >
+        Skip to content
+      </a>
+      <Header />
+      <main id="content" tabIndex={-1} className="focus:outline-none">
+        <Hero />
+        <Projects />
+        <About />
+        <Contact />
+      </main>
+      <Footer />
+    </>
   )
 }

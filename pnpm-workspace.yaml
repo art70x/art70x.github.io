@@ -4,11 +4,11 @@ allowBuilds:
 packages:
   - .
 permissions:
-  "@tanstack/devtools-vite":
+  '@tanstack/devtools-vite':
     skills: true
-  "@tanstack/react-router":
+  '@tanstack/react-router':
     skills: [router-query, migrate-from-react-router, react-router]
-  "@tanstack/router-plugin":
+  '@tanstack/router-plugin':
     skills: true
   taze:
     skills: true
@@ -17,12 +17,13 @@ skills:
     - .claude/skills
     - .github/skills
 catalog:
+  '@tabler/icons-react': ^3.50.0
   vite: npm:@voidzero-dev/vite-plus-core@1.4.0
   vite-plus: 1.4.0
 overrides:
-  vite@*: "catalog:"
+  vite@*: 'catalog:'
 peerDependencyRules:
   allowAny:
     - vite
   allowedVersions:
-    vite: "*"
+    vite: '*'

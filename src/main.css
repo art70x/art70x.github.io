@@ -1,17 +1,63 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/montserrat';
 
-@import "tailwindcss";
-
-* {
-  box-sizing: border-box;
+@theme {
+  --font-sans: 'Montserrat Variable', 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Source Code Pro', 'Consolas', monospace;
+  --color-ink: #0b0b0b;
+  --color-line: #303030;
+  --color-mute: #a0a0a0;
+  /* original layout switched at max-width: 760px */
+  --breakpoint-tab: 761px;
 }
 
-html,
-body,
-#app {
-  min-height: 100%;
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 1rem;
+  }
+
+  body {
+    @apply bg-ink font-sans leading-[1.6] text-white;
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 4px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      transition: none !important;
+      animation: none !important;
+    }
+
+    a:hover {
+      transform: none !important;
+    }
+  }
 }
 
-body {
-  margin: 0;
+@utility wrap {
+  width: min(1120px, calc(100% - 40px));
+  margin: auto;
 }
 
+@utility eyebrow {
+  @apply text-[11px] font-semibold tracking-[.24em] text-mute uppercase;
+}
+
+@utility section {
+  @apply border-t border-line py-13.5 tab:py-18;
+}
