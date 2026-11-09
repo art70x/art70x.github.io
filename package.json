@@ -1,5 +1,5 @@
 {
-  "name": "website",
+  "name": "portfolio",
   "private": true,
   "type": "module",
   "imports": {
@@ -10,8 +10,10 @@
     "generate-routes": "tsr generate",
     "build": "vp build",
     "preview": "vp preview",
+    "check": "vp check",
     "lint": "vp lint . --fix",
     "format": "vp fmt --write .",
+    "up": "taze major -I",
     "prepare": "vp config"
   },
   "dependencies": {
